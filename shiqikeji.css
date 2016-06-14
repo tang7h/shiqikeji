@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "microsoft yahei", sans-serif;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.87);
+}
+a {
+  color: #1f8ced;
+  text-decoration: none;
+}
+.top {
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 6;
+}
+.align-center {
+}
+.align-center>*,
+.align-center::after {
+  display: inline-block;
+  vertical-align: middle;
+}
+.align-center::after {
+  content: '';
+  height: 100%;
+}
+.logo {
+  height: 100%;
+  width: auto;
+  margin: 0 24px;
+}
+.nav {
+  float: right;
+}
+.nav-item {
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.54);
+  padding: 0 16px;
+  margin: 0 16px;
+  line-height: 64px;
+}
+.nav-item:hover {
+  color: rgba(0, 0, 0, 0.87);
+}
+/*carousel*/
+.section-carousel {
+  height: 500px;
+}
+.carousel {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+/*指示器*/
+.carousel-sliders {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 16px;
+  text-align: center;
+  font-size: 0;
+}
+.carousel-slider {
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+  box-sizing: content-box;
+  vertical-align: middle;
+}
+.carousel-slider::after {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: rgba(0,0,0,.5);
+  border-radius: 50%;
+}
+.carousel-slider:hover::after{
+  background: rgba(0,0,0,.7);
+}
+.carousel-slider.active {
+  padding: 8px;
+}
+.carousel-slider.active::after {
+  width: 10px;
+  height: 10px;
+  background: rgba(255,255,255,.5);
+  border: 1px solid #1f8ced;
+}
+.carousel-slider.active::after {
+  background: rgba(255,255,255,.7);
+}
+/*箭头*/
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: scaleX(.8) translateY(-36px);
+  padding: 24px;
+  cursor: pointer;
+  box-sizing: content-box;
+  opacity: 0;
+  transition: opacity .3s;
+}
+.carousel:hover .carousel-arrow {
+  opacity: 1;
+}
+.carousel-arrow::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: rotate(45deg);
+  border: 1px solid rgba(0,0,0,.54);
+  border-width: 0 0 1px 1px;
+}
+.carousel-arrow.right::after {
+  transform: rotate(-135deg);
+}
+.carousel-arrow:hover::after {
+  border-color: rgba(0,0,0,.87);
+}
+.carousel-arrow.left {
+  left: 0;
+}
+.carousel-arrow.right {
+  right: 0;
+}
+.cards {
+  height: 200px;
+  /*max-width: 1000px;*/
+  margin: 2px auto;
+  font-size: 0;
+}
+.card {
+  width: 25%;
+  height: 100%;
+  display: inline-block;
+  background: #f2f2f2;
+  border-right: 2px solid #fff;
+}
+.card:last-child {
+  border-right: none;
+}
+.footer {
+  font-size: 12px;
+  color: rgba(0,0,0,.38);
+  background: #f2f2f2;
+  padding: 24px;
+}
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.footer.wrapper {
+  padding: 40px 0;
+}
+.col {
+  display: inline-block;
+}
+.contact {
+  width: 20%;
+}
