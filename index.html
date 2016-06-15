@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh" ng-app="sqkjApp" ng-controller="sqkjCtrl">
 <head>
   <meta charset="UTF-8">
   <title>拾起科技</title>
   <link rel="stylesheet" href="shiqikeji.css">
+  <script src="angular.min.js"></script>
+  <script src="shiqikeji.js"></script>
 </head>
 <body>
   <div class="top align-center">
@@ -17,19 +19,15 @@
   </div>
   <div class="section-carousel">
     <div class="carousel">
-      <div class="carousel-items">
-        <div class="carousel-item"></div>
+      <div class="carousel-items" style="width:{{carousel.acts.length*100}}vw;transform:translateX({{-carousel.currentAct*100}}vw)">
+        <div class="carousel-item" ng-repeat="act in carousel.acts" style="background-image:url({{act.background}})"></div>
       </div>
       <div class="carousel-sliders">
-        <div class="carousel-slider active"></div>
-        <div class="carousel-slider"></div>
-        <div class="carousel-slider"></div>
-        <div class="carousel-slider"></div>
-        <div class="carousel-slider"></div>
+        <div ng-repeat="act in carousel.acts" class="carousel-slider {{carousel.isActive($index)}}" ng-click="carousel.runTo($index)"></div>
       </div>
       <div class="carousel-arrows">
-        <div class="carousel-arrow left"></div>
-        <div class="carousel-arrow right"></div>
+        <div class="carousel-arrow left" ng-click="carousel.runPrevious()"></div>
+        <div class="carousel-arrow right" ng-click="carousel.runNext()"></div>
       </div>
     </div>
   </div>

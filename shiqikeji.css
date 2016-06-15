@@ -70,12 +70,15 @@ p {
 }
 .carousel-items {
   height: 100%;
+  transition: .3s;
 }
 .carousel-item {
   width: 100vw;
   height: 100%;
   background: url(1465801038263.jpg)no-repeat center;
   background-size: cover;
+  float: left;
+
 }
 
 /*指示器*/
