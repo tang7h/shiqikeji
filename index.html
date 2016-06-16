@@ -11,10 +11,7 @@
   <div class="top align-center">
     <a href="" class="logo align-center">拾起科技</a>
     <div class="nav">
-      <a href="#" class="nav-item">链接</a>
-      <a href="#" class="nav-item">链接</a>
-      <a href="#" class="nav-item">链接</a>
-      <a href="#" class="nav-item">链接</a>
+      <a class="nav-item" ng-repeat="nav in navs" href="{{nav.addr}}">{{nav.name}}</a>
     </div>
   </div>
   <div class="section-carousel">
@@ -32,42 +29,24 @@
     </div>
   </div>
   <div class="cards">
-    <div class="card product">
-      <img src="product-card.jpg" alt="">
-    </div>
-    <div class="card product">
-      <img src="product-card.jpg" alt="">
-    </div>
-    <div class="card product">
-      <img src="product-card.jpg" alt="">
-    </div>
-    <div class="card product">
-      <img src="product-card.jpg" alt="">
+    <div class="card product" ng-repeat="card in cards" style="background-image:url({{card.addr}})">
     </div>
   </div>
   <div class="footer">
     <div class="wrapper">
       <div class="row">
         <div class="col">
-          <dl>
-            <dt>下载</dt>
-            <dd><a href="#">快乐十分</a></dd>
-            <dd><a href="#">11选5</a></dd>
-            <dd><a href="#">今知商城</a></dd>
-          </dl>
-          <dl>
-            <dt>快速入口</dt>
-            <dd><a href="#">登陆</a></dd>
+          <dl ng-repeat="i in quickLinks">
+            <dt>{{i.name}}</dt>
+            <dd ng-repeat="link in i.links"><a href="{{link.addr}}">{{link.name}}</a></dd>
           </dl>
         </div>
       </div>
       <div class="row info">
         <div class="col left">
+          <span>云南拾起电子商务有限公司 版权信息</span>
+          <span class="tel"><span>0871 - </span>65899821</span>
           <p>备案信息</p>
-          <p>云南拾起电子商务有限公司 版权信息</p>
-        </div>
-        <div class="col contact align-center">
-          <p class="tel"><span>0871 - </span>65899821</p>
         </div>
       </div>
     </div>
