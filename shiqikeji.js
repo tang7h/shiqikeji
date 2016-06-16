@@ -3,7 +3,7 @@ app.controller('sqkjCtrl',function($scope,$interval){
   $scope.carousel = {
     acts: [
       {background:'http://images.apple.com/v/home/cq/images/heros/ios_10_wwdc_2016_medium.jpg'},
-      {background:'http://images.apple.com/v/home/cq/images/heros/mac_os_wwdc_2016_medium.jpg'},
+      {background:'http://images.apple.com/v/home/cn/images/heros/macbook_medium.png'},
       {background:'http://images.apple.com/v/home/cn/images/heros/ipad_pro_family_medium.jpg'}
     ],
     currentAct: 0,
@@ -17,20 +17,36 @@ app.controller('sqkjCtrl',function($scope,$interval){
       if(this.currentAct >= this.acts.length){
         this.currentAct = 0;
       }
+      this.resetTimer();
     },
     runPrevious: function(){
       this.currentAct--;
       if(this.currentAct < 0){
         this.currentAct = this.acts.length-1;
       }
+      this.resetTimer();
     },
     runTo: function(i){
       this.currentAct = i;
+      this.resetTimer();
+    },
+    pause: function(){
+      if(angular.isDefined(stop)){
+        $interval.cancel(stop);
+        stop = undefined;
+      }
+    },
+    run: function(){
+      stop = $interval(function () {
+        $scope.carousel.runNext();
+      }, 5000);
+    },
+    resetTimer: function(){
+      this.pause();
+      this.run();
     }
   }
-  $interval(function () {
-    $scope.carousel.runNext();
-  }, 3000);
+  $scope.carousel.run();
   $scope.navs = [
     { name: '链接', addr: '#' },
     { name: '链接', addr: '#' },
