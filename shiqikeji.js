@@ -2,9 +2,9 @@ var app = angular.module('sqkjApp',[]);
 app.controller('sqkjCtrl',function($scope,$interval){
   $scope.carousel = {
     acts: [
-      {background:'banner-kuaileshifen-01.png'},
-      {background:'banner-shiyixuanwu-01.png'},
       {background:'banner-jinzhishangcheng-01.png'},
+      {background:'banner-kuaileshifen-01.png'},
+      {background:'banner-shiyixuanwu-01.png'}
     ],
     currentAct: 0,
     isActive: function(i){

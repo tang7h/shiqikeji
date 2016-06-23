@@ -162,10 +162,15 @@ a {
   font-size: 0;
   text-align: center;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: #f2f2f2;
 }
 .card {
-  flex: 1 1 25%;
+  flex: 0 1 25%;
   width: 25%;
+  min-width: 240px;
+  max-width: 640px;
   height: 200px;
   display: inline-block;
   background: #f2f2f2;
