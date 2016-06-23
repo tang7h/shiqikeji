@@ -71,6 +71,10 @@ app.controller('sqkjCtrl',function($scope,$interval){
   ]
   $scope.cards = [
     { addr: 'card-kuaileshifen-01.png' },
+    { addr: 'card-kuaileshifen-01.png' },
+    { addr: 'card-kuaileshifen-01.png' },
+    { addr: 'card-kuaileshifen-01.png' },
+    { addr: 'card-kuaileshifen-01.png' },
     { addr: 'card-shiyixuanwu-01.png' },
     { addr: 'card-jinzhishangcheng-01.png' },
     { addr: 'card-hire-01.png' }
