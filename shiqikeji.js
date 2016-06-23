@@ -2,9 +2,9 @@ var app = angular.module('sqkjApp',[]);
 app.controller('sqkjCtrl',function($scope,$interval){
   $scope.carousel = {
     acts: [
-      {background:'http://images.apple.com/v/home/cq/images/heros/ios_10_wwdc_2016_medium.jpg'},
-      {background:'http://images.apple.com/v/home/cn/images/heros/macbook_medium.png'},
-      {background:'http://images.apple.com/v/home/cn/images/heros/ipad_pro_family_medium.jpg'}
+      {background:'banner-kuaileshifen-01.png'},
+      {background:'banner-shiyixuanwu-01.png'},
+      {background:'banner-jinzhishangcheng-01.png'},
     ],
     currentAct: 0,
     isActive: function(i){
@@ -70,9 +70,9 @@ app.controller('sqkjCtrl',function($scope,$interval){
     }
   ]
   $scope.cards = [
-    { addr: 'http://images.apple.com/v/home/cq/images/promos/iphone_6s_medium.jpg' },
-    { addr: 'http://images.apple.com/v/home/cq/images/promos/ipadpro_medium.jpg' },
-    { addr: 'product-card.jpg' },
-    { addr: 'product-card.jpg' }
+    { addr: 'card-kuaileshifen-01.png' },
+    { addr: 'card-shiyixuanwu-01.png' },
+    { addr: 'card-jinzhishangcheng-01.png' },
+    { addr: 'card-hire-01.png' }
   ]
 })

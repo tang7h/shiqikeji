@@ -1,58 +1,59 @@
 <!DOCTYPE html>
 <html lang="zh" ng-app="sqkjApp" ng-controller="sqkjCtrl">
 <head>
-  <meta charset="UTF-8">
-  <title>拾起科技</title>
-  <meta name="viewport" content="initial-scale=1">
-  <link rel="stylesheet" href="shiqikeji.css">
-  <script src="angular.min.js"></script>
-  <script src="shiqikeji.js"></script>
+	<meta charset="UTF-8">
+	<title>拾起科技</title>
+	<meta name="viewport" content="initial-scale=1">
+	<link rel="stylesheet" href="shiqikeji.css">
+	<script src="angular.min.js"></script>
+	<script src="shiqikeji.js"></script>
 </head>
 <body>
-  <div class="top align-center">
-    <a href="" class="logo align-center">拾起科技</a>
-    <div class="nav">
-      <a class="nav-item" ng-repeat="nav in navs" href="{{nav.addr}}">{{nav.name}}</a>
-    </div>
-  </div>
-  <div class="section-carousel">
-    <div class="carousel">
-      <div class="carousel-items" style="width:{{carousel.acts.length*100}}vw;transform:translateX({{-carousel.currentAct*100}}vw)">
-        <div class="carousel-item" ng-repeat="act in carousel.acts" style="background-image:url({{act.background}})"></div>
-      </div>
-      <div class="carousel-sliders">
-        <div ng-repeat="act in carousel.acts" class="carousel-slider {{carousel.isActive($index)}}" ng-click="carousel.runTo($index)"></div>
-      </div>
-      <div class="carousel-arrows">
-        <div class="carousel-arrow left" ng-click="carousel.runPrevious()"></div>
-        <div class="carousel-arrow right" ng-click="carousel.runNext()"></div>
-      </div>
-    </div>
-  </div>
-  <div class="cards">
-    <div class="card product" ng-repeat="card in cards" style="background-image:url({{card.addr}})">
-    </div>
-  </div>
-  <div class="footer">
-    <div class="wrapper">
-      <div class="row">
-        <div class="col">
-          <dl ng-repeat="i in quickLinks">
-            <dt>{{i.name}}</dt>
-            <dd ng-repeat="link in i.links"><a href="{{link.addr}}">{{link.name}}</a></dd>
-          </dl>
-        </div>
-      </div>
-      <div class="row info">
-        <div class="col left">
-          <p>
-            <span>云南拾起电子商务有限公司 版权信息</span>
-            <tel class="tel"><span>0871 - </span>65899821</tel>
-          </p>
-          <p>备案信息</p>
-        </div>
-      </div>
-    </div>
-  </div>
+	<div class="top align-center">
+		<a href="" class="logo align-center">拾起科技</a>
+		<div class="nav">
+			<a class="nav-item" ng-repeat="nav in navs" href="{{nav.addr}}">{{nav.name}}</a>
+		</div>
+	</div>
+	<div class="section-carousel">
+		<div class="carousel">
+			<div class="carousel-items" style="width:{{carousel.acts.length*100}}vw;transform:translateX({{-carousel.currentAct*100}}vw)">
+				<div class="carousel-item" ng-repeat="act in carousel.acts" style="background-image:url({{act.background}})"></div>
+			</div>
+			<div class="carousel-sliders">
+				<div ng-repeat="act in carousel.acts" class="carousel-slider {{carousel.isActive($index)}}" ng-click="carousel.runTo($index)"></div>
+			</div>
+			<div class="carousel-arrows">
+				<div class="carousel-arrow left" ng-click="carousel.runPrevious()"></div>
+				<div class="carousel-arrow right" ng-click="carousel.runNext()"></div>
+			</div>
+		</div>
+	</div>
+	<div class="cards">
+		<div class="card product" ng-repeat="card in cards" style="background-image:url({{card.addr}})">
+		</div>
+	</div>
+	<div class="footer">
+		<div class="wrapper">
+			<div class="row">
+				<div class="col">
+					<dl ng-repeat="i in quickLinks">
+						<dt>{{i.name}}</dt>
+						<dd ng-repeat="link in i.links"><a href="{{link.addr}}">{{link.name}}</a></dd>
+					</dl>
+				</div>
+			</div>
+			<div class="row info">
+				<div class="col left">
+					<p>
+						<span>云南拾起电子商务有限公司</span>
+						<span>昆明市盘龙区万华路葡萄街区D栋4407</span>
+						<tel class="tel">0871 - 65899821</tel>
+					</p>
+					<p>版权信息 备案信息</p>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
