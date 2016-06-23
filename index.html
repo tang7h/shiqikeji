@@ -18,7 +18,7 @@
 	<div class="section-carousel">
 		<div class="carousel">
 			<div class="carousel-items" style="width:{{carousel.acts.length*100}}vw;transform:translateX({{-carousel.currentAct*100}}vw)">
-				<div class="carousel-item" ng-repeat="act in carousel.acts" style="background-image:url({{act.background}})"></div>
+				<div class="carousel-item" ng-repeat="act in carousel.acts" style="background-image:url(images/{{act.background}})"></div>
 			</div>
 			<div class="carousel-sliders">
 				<div ng-repeat="act in carousel.acts" class="carousel-slider {{carousel.isActive($index)}}" ng-click="carousel.runTo($index)"></div>
@@ -30,7 +30,7 @@
 		</div>
 	</div>
 	<div class="cards">
-		<div class="card product" ng-repeat="card in cards" style="background-image:url({{card.addr}})">
+		<div class="card product" ng-repeat="card in cards" style="background-image:url(images/{{card.addr}})">
 		</div>
 	</div>
 	<div class="footer">
