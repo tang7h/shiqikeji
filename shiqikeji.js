@@ -4,16 +4,6 @@ app.controller('sqkjCtrl',function($scope,$interval){
     acts: [
       {background:'banner-jinzhishangcheng-01.png'},
       {background:'banner-kuaileshifen-01.png'},
-      {background:'banner-jinzhishangcheng-01.png'},
-      {background:'banner-kuaileshifen-01.png'},
-      {background:'banner-jinzhishangcheng-01.png'},
-      {background:'banner-kuaileshifen-01.png'},
-      {background:'banner-jinzhishangcheng-01.png'},
-      {background:'banner-kuaileshifen-01.png'},
-      {background:'banner-jinzhishangcheng-01.png'},
-      {background:'banner-kuaileshifen-01.png'},
-      {background:'banner-jinzhishangcheng-01.png'},
-      {background:'banner-kuaileshifen-01.png'},
       {background:'banner-shiyixuanwu-01.png'}
     ],
     currentAct: 0,
@@ -80,10 +70,6 @@ app.controller('sqkjCtrl',function($scope,$interval){
     }
   ]
   $scope.cards = [
-    { addr: 'card-kuaileshifen-01.png' },
-    { addr: 'card-kuaileshifen-01.png' },
-    { addr: 'card-kuaileshifen-01.png' },
-    { addr: 'card-kuaileshifen-01.png' },
     { addr: 'card-kuaileshifen-01.png' },
     { addr: 'card-shiyixuanwu-01.png' },
     { addr: 'card-jinzhishangcheng-01.png' },
