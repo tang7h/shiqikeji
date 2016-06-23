@@ -4,6 +4,16 @@ app.controller('sqkjCtrl',function($scope,$interval){
     acts: [
       {background:'banner-jinzhishangcheng-01.png'},
       {background:'banner-kuaileshifen-01.png'},
+      {background:'banner-jinzhishangcheng-01.png'},
+      {background:'banner-kuaileshifen-01.png'},
+      {background:'banner-jinzhishangcheng-01.png'},
+      {background:'banner-kuaileshifen-01.png'},
+      {background:'banner-jinzhishangcheng-01.png'},
+      {background:'banner-kuaileshifen-01.png'},
+      {background:'banner-jinzhishangcheng-01.png'},
+      {background:'banner-kuaileshifen-01.png'},
+      {background:'banner-jinzhishangcheng-01.png'},
+      {background:'banner-kuaileshifen-01.png'},
       {background:'banner-shiyixuanwu-01.png'}
     ],
     currentAct: 0,
