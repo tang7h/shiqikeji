@@ -40,7 +40,7 @@ a {
 .logo {
   height: 100%;
   width: 169px;
-  background: url(logo-landscape-01.png)no-repeat center;
+  background: url(images/logo-landscape-01.png)no-repeat center;
   background-size: contain;
   flex: none;
   font-size: 0;
